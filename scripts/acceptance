@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ginkgo --v --skip=large acceptance
+
