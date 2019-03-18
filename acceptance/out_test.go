@@ -131,7 +131,7 @@ var _ = Describe("Out", func() {
 		})
 	})
 
-	Context("when given a regex pattern is provided", func() {
+	Context("given a regex pattern", func() {
 		BeforeEach(func() {
 			err := os.Mkdir(filepath.Join(tempDir, "some-resource"), os.ModePerm)
 			Expect(err).NotTo(HaveOccurred())
