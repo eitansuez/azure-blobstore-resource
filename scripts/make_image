@@ -1,0 +1,10 @@
+#!/bin/sh
+
+docker image build \
+  -t azure-blobstore-resource \
+  --build-arg TEST_STORAGE_ACCOUNT_NAME=${TEST_STORAGE_ACCOUNT_NAME} \
+  --build-arg TEST_STORAGE_ACCOUNT_KEY=${TEST_STORAGE_ACCOUNT_KEY} \
+  .
+
+docker tag azure-blobstore-resource $DOCKER_ID_USER/azure-blobstore-resource
+docker push $DOCKER_ID_USER/azure-blobstore-resource
