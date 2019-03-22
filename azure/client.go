@@ -39,8 +39,8 @@ func (c Client) ListBlobs(params storage.ListBlobsParameters) (storage.BlobListR
 		return storage.BlobListResponse{}, err
 	}
 
-	blobClient := client.GetBlobService()
-	cnt := blobClient.GetContainerReference(c.container)
+	blobService := client.GetBlobService()
+	cnt := blobService.GetContainerReference(c.container)
 
 	return cnt.ListBlobs(params)
 }
